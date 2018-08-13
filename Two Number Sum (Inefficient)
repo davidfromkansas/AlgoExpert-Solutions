@@ -1,0 +1,17 @@
+def twoNumberSum(array, targetSum):
+    # Write your code here.
+	length = len(array)
+	new_arr = []
+
+	#inefficient solution
+	for i in range(length):
+		for j in range(i+1,length):
+			if((array[i] + array[j]) == targetSum):
+				if(array[i] > array[j]):
+					new_arr.append(array[j])
+					new_arr.append(array[i])
+				else:
+					new_arr.append(array[i])
+					new_arr.append(array[j])
+				return new_arr
+	return new_arr
