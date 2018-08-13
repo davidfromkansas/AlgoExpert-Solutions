@@ -1,0 +1,18 @@
+def twoNumberSum(array, targetSum):
+	hash_table = {'hello':4}
+	new_arr = []
+	for num in array:
+		y = targetSum - num
+		if(y in hash_table):
+			if(num > y):
+				new_arr.append(y)
+				new_arr.append(num)
+			else:
+				new_arr.append(num)
+				new_arr.append(y)
+			return new_arr
+		else:
+			hash_table[num] = True
+	return new_arr
+		
+		
